@@ -1,0 +1,73 @@
+li {
+  display: inline;
+  padding: 15px;
+  color: #B0BEC5;
+  justify-content: center;
+}
+
+/* a {
+  color: #B0BEC5;
+  text-decoration: none;
+} */
+
+/* li:nth-child(1) {
+  display: inline;
+  padding-left: 0px;
+} */
+
+div {
+  min-height: 50px;
+
+}
+
+ul {
+  margin: 15px 60px 15px 60px;
+  padding: 15px 00px 15px 00px;
+  border-bottom: #B0BEC5 solid 0.5px;
+}
+
+.selectedClass > span {
+  color: white;
+}
+
+.selectedClass {
+  background-color: #B0BEC5;
+  color: white;
+}
+
+.notSelected:hover {
+  background-color:  #B0BEC5;
+}
+
+/* 
+.Tech:hover, .notSelected:hover {
+  background-color: #F06292;
+}
+
+.Music:hover {
+  background-color: #E57373;
+}
+
+.Publishing:hover {
+  background-color: #CE93D8;
+}
+
+.Film:hover  {
+  background-color: #B39DDB;
+}
+
+.Food:hover {
+  background-color: #9FA8DA;
+}
+
+.Games:hover  {
+  background-color: #2196F3;
+}
+
+.Arts:hover  {
+  background-color: #039BE5;
+}
+
+.Illustration:hover  {
+  background-color: #26A69A;
+} */

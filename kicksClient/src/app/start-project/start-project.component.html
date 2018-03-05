@@ -1,0 +1,69 @@
+<div class="wrapper">
+    <h4>
+      START A NEW PROJECT
+    </h4>
+</div>
+
+<div class="container">
+  <div [hidden]="submitted">
+    <form (ngSubmit)="onSubmit()" #projectForm="ngForm">
+      <div class="form-group">
+        <label for="name">Project Name</label>
+        <input type="text" placeholder="Give your new project a name" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+      class="alert alert-danger"> A project must have a name
+  </div>
+      </div>
+
+      <div class="form-group">
+        <label for="field">Field</label>
+        <select class="form-control" id="field" required [(ngModel)]="model.field" name="field">
+          <option value="">Select a field for your new project</option>
+          <option *ngFor="let field of fields" [value]="field">{{field}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+          <label for="fundingTarget">Funding Target</label>
+          <input type="number" placeholder=0 class="form-control" id="fundingTarget" required [(ngModel)]="model.fundingTarget" name="fundingTarget" #name="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <app-ngx-editor [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="model.description" name="description"></app-ngx-editor>
+      </div>
+
+      <div class="form-group">
+          <label for="picture_big">Picture - Max Size 90KB</label>
+          <input type="file" class="form-control" id="picture_big" (ngModel)="model.picture_big" name="picture_big" #name="ngModel">
+      </div>
+
+      <button type="submit" class="btn btn-success" [disabled]="!projectForm.form.valid">Submit</button>
+
+    </form>
+  </div>
+  <div [hidden]="!submitted">
+      <h5>You submitted the following:</h5>
+      <div class="row">
+        <div class="col-xs-3">Name: </div>
+        <div class="col-xs-9  pull-left">{{ model.name }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Field: </div>
+        <div class="col-xs-9 pull-left">{{ model.field }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Description: </div>
+        <div class="col-xs-9 pull-left">{{ model.description }}</div>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-xs-3">Target: </div>
+          <div class="col-xs-9 pull-left">{{ model.fundingTarget }}</div>
+        </div>
+        <br>
+      <button class="btn btn-primary" (click)="navToNewProj(idCreated)">CHECK IT OUT!</button>
+    </div>
+</div>
+
+

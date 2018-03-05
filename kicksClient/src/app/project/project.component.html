@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <ul id="projectsUl">
+    <li *ngFor="let project of projects">
+      <a [routerLink]="['/project', project.id]">
+        <div class="projectCell" title={{project.field}}>
+          <h5>
+          {{project.name}}
+          </h5>
+          Field: {{project.field}}
+          <br>
+          Description: {{project.description}}
+          <br>
+          Funds Target: {{project.fundingTarget | number:''}}
+          <br>
+          Funds Collected: {{project.totalFunds | number:''}}
+          <br>
+          Funding Rate: {{project.fundingRate | percent}}
+          <br>
+          Status: {{project.status}}
+          <br>
+          <img [src]="project.picture_big">  
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>

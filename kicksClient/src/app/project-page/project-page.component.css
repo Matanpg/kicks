@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    /* margin: 10%;
+    width: 80%; */
+}
+
+form {
+    background-color: rgb(233, 220, 220);
+    padding: 1%;
+}
+
+/* h2 {
+    display: block
+} */
+
+.external {
+    display: grid;
+    justify-content: center;
+    margin: 10%;
+    width: 80%;
+}
+

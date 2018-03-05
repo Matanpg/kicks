@@ -1,0 +1,67 @@
+ img {
+    height: 15%;
+    width: 15%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#projectsUl {
+    width: 70%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    /* grid-gap: 15%; */
+    grid-row-gap: 10px;
+    grid-column-gap: 5%;
+}
+
+h5 {
+    font-weight: bolder;
+}
+
+.projectCell {
+    border: 1px black solid;
+    padding: 5%;
+    height: 100%;
+}
+
+div[title="Design & Tech"] {
+    background-color: #F06292;
+}
+
+div[title="Music"] {
+    background-color: #E57373;
+}
+
+div[title="Publishing"] {
+    background-color: #CE93D8;
+}
+
+div[title="Film"] {
+    background-color: #B39DDB;
+}
+
+div[title="Food & Craft"] {
+    background-color: #9FA8DA;
+}
+
+div[title="Games"] {
+    background-color: #2196F3;
+}
+
+div[title="Arts"] {
+    background-color: #039BE5;
+}
+
+div[title="Comics & Illustration"] {
+    background-color: #26A69A;
+}
+
+

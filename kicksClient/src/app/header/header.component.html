@@ -1,0 +1,29 @@
+<div class="kicksLogo kicksLogoSmallScreen"><a href="">KICKS</a></div>
+
+<div class="wrapper">
+  <div><a routerLink="/projects" routerLinkActive="active">Explore</a></div>
+  <div><a routerLink="/startProject" routerLinkActive="active">Start a project</a></div>
+
+  <div class="kicksLogo kicksLogoLargeScreen">
+    <a routerLink="/home" routerLinkActive="active">KICKS</a>
+  </div>
+
+  <div>
+      <a routerLink="/user" routerLinkActive="active">
+        Welcome {{userData.user_name}}!
+      </a>
+  </div>
+  
+
+  <button class="btn btn-outline-primary" (click)="open()" *ngIf="out===true">
+    Sign in
+  </button>
+
+  <button class="btn btn-outline-primary" (click)="logOut()" *ngIf="out===false">
+    Log Out
+  </button>
+
+</div>
+
+
+

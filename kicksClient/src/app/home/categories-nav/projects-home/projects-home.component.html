@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <ul id="projectsUl">
+    <ng-container *ngFor="let project of projects">
+      <div class="projectCell" title={{project.field}}
+      *ngIf="project.field===field && project.status===status"
+      [routerLink]="['/project', project.id]">
+        <div class="innerRap">
+          Project: {{project.name}}
+          <img [src]="project.picture_big">
+        </div>
+      </div>
+    </ng-container>
+  </ul>
+</div>

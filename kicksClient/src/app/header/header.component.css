@@ -1,0 +1,97 @@
+.wrapper, .kicksLogoSmallScreen {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.kicksLogo {
+  font-size: 250%;
+  font-weight: bold;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width:10%;
+  margin-left: 5px;
+}
+
+.kicksLogoSmallScreen {
+  min-height: 50px;
+}
+
+/* @media (min-width: 1024px) {
+  .wrapper {
+    display: flex;
+    grid-template-columns: 1fr 1fr 7fr 1fr 1fr;
+    min-height: 50px;
+    align-content: center;
+  }
+
+  .kicksLogoSmallScreen {
+    display: none;
+  }
+} */
+
+@media (min-width: 768px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+    min-height: 50px;
+    align-content: center;
+  }
+
+  .kicksLogoSmallScreen {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 7fr 1fr 1fr;
+    min-height: 50px;
+    align-content: center;
+  }
+
+  .kicksLogoSmallScreen {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    min-height: 50px;
+    align-content: center;
+  }
+
+  .kicksLogoLargeScreen {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    align-content: center;
+    grid-gap: 15px;
+  }
+
+  .kicksLogoLargeScreen {
+    display: none;
+  }
+
+}

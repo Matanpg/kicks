@@ -1,0 +1,18 @@
+<div>
+  <ul>
+    <li *ngFor="let category of categories" (click)="updateSelected(a.innerText)" [ngClass]="(a.innerText===selected)?'selectedClass':'notSelected'">
+      <span #a >{{category}}</span>
+    </li>
+  </ul>
+</div>
+
+<div>
+    <ul>
+      <li *ngFor="let status of statuses" (click)="updateSelectedStatus(a.innerText)" [ngClass]="(a.innerText===selectedStatus)?'selectedClass':'notSelected'">
+        <span #a >{{status}}</span>
+      </li>
+    </ul>
+</div>
+
+
+<app-projects-home [field]="selected" [status]="selectedStatus"></app-projects-home>

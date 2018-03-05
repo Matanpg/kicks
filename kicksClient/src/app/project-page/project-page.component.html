@@ -1,0 +1,30 @@
+<div class="external">
+    <h1>{{project.name}}</h1>
+    <div class="wrapper">
+        <div class="projectCell" title={{project.field}}>
+            Field: {{project.field}}
+            <br>
+            Description: {{project.description}}
+            <br>
+            Funds Target: {{project.fundingTarget | number:''}}
+            <br>
+            Funds Collected: {{project.totalFunds | number:''}}
+            <br>
+            Funding Rate: {{project.fundingRate | percent}}
+            <br>
+            Status: {{project.status}}
+            <br>
+            <form (ngSubmit)="onSubmit()" #projectForm="ngForm">
+                <div class="form-group">
+                        <label for="fundingFromUser">Fund</label>
+                        <input type="number" placeholder=0 class="form-control" id="fundingFromUser" required 
+                        [(ngModel)]="model.fundingFromUser" 
+                        name="fundingFromUser" #name="ngModel">
+                </div>
+                <button type="submit" class="btn btn-success" [disabled]="!projectForm.form.valid">Fund!</button>
+            </form>
+        </div>
+
+        <img [src]="project.picture_big" alt="" id="picBig">
+    </div>
+</div>

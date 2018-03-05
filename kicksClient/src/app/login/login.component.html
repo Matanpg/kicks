@@ -1,0 +1,23 @@
+
+  <div class="wrapper">
+    <div class="formWrapper">
+      <form (ngSubmit)="loginUser()" (ngSubmit)="activeModal.close('Close click')">
+        <h3>Log-In</h3>
+        <input type="text" name="userName" [(ngModel)]="username" placeholder="user name" class="form-control">
+        <input type="password" name="password" [(ngModel)]="password" placeholder="password" class="form-control">
+        <button type="submit" name="button"  (submit)="activeModal.close('Close click')">Log In</button>
+      </form>
+    </div>
+
+    <div class="formWrapper">
+      <form (ngSubmit)="createUser()"  (ngSubmit)="activeModal.close('Close click')">
+        <h3>Sign-Up</h3>
+        <input type="text" name="userNameSignup" [(ngModel)]="userNameSignup" placeholder="user name" class="form-control">
+        <input type="text" name="firstNameSignup" [(ngModel)]="firstNameSignup" placeholder="first name" class="form-control">
+        <input type="text" name="lastNameSignup" [(ngModel)]="lastNameSignup" placeholder="last name" class="form-control">
+        <input type="email" name="emailSignup" [(ngModel)]="emailSignup" placeholder="email" class="form-control">
+        <input type="password" name="passwordSignup" [(ngModel)]="passwordSignup" placeholder="password" class="form-control">
+        <button type="submit" name="button"  (submit)="activeModal.close('Close click')">Sign Up</button>
+      </form>
+    </div>
+  </div>
